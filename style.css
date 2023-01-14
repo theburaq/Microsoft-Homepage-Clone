@@ -1,0 +1,341 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;  
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: #000;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+a{
+    color: #262626;
+    text-decoration: none;  /*to remove the underlines */
+}
+
+ul{
+    list-style: none;   /*to remove the bullets */
+}
+
+.container{
+    width: 90%;  /*it covers almost the full page*/
+    max-width: 1100px; /*it'll take up 90% of the screen and will stop at 1100px*/
+    margin: auto;  /*for equal margin around */
+}
+
+/* Nav Bar */
+.main-nav{
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    height: 60px;
+    font-size: 13px;
+    justify-content: space-between;
+}
+
+.main-nav .logo{
+    width: 110px;
+}
+
+.main-nav ul{
+    display: flex;
+}
+
+.main-nav ul li{
+    padding: 0 10px;
+}
+
+/* to hover over the menu links with an underline below */
+.main-nav ul li a:hover{ 
+    border-bottom: 2px solid #262626;
+}
+
+/* to increase the space below the hovered lines, put some padding below the links*/
+.main-nav ul li a{
+    padding-bottom: 2px;
+}
+
+.main-nav ul.main-menu{
+    flex: 1;
+    margin-left: 20px;
+}
+
+.menu-btn{
+    cursor: pointer;  /* when we hover over, we get pointer */
+    position: absolute;  /* to postion at one place at the top */
+    top: 20px;
+    right: 30px;
+    z-index: 2;   /* so the bar is always on the top */
+    display: none; /* the bar will not show unless the screen is 700px or below */
+ }
+
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    background: #262626;
+    color: #fff;
+    font-size: 15px;
+    border: 0;
+    padding: 10px 20px;
+}
+
+.btn:hover{
+    opacity: 0.9; /* when hovered over the button, the color becomes little lighter */
+}
+
+/* Showcase */
+.showcase{
+    background-image: url('images/showcase.jpg');
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+}
+
+.showcase h2, .showcase p{
+    margin-bottom: 10px;
+}
+
+.showcase .btn{
+    margin-top: 20px;
+}
+
+/* Home cards */
+.home-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;    /* use 'grid-gap' instead of margin here for in b/w spaces of the divs */
+    margin-bottom: 40px;
+}
+
+/*as the images go out of the conatiner so below is set to kee them insdie the container*/
+.home-cards img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.home-cards h3{
+    margin-bottom: 5px;
+}
+
+.home-cards a{
+    display: inline-block;
+    color: #0067b8;
+    text-transform: uppercase; /* to tranform all to capital */
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+/* for the arrow to move little to right when we hover over the link */
+.home-cards a:hover i{
+    margin-left: 10px;
+}
+
+/* X-box */
+.xbox{
+    background-image: url('images/xbox.png');
+    width: 100%;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+.xbox .content{
+    width: 40%;
+    padding: 50px 0 0 30px;
+}
+
+.xbox p{
+    margin: 10px 0 20px;
+}
+
+/* Carbon */
+.carbon{
+    background-image: url('images/carbon.jpg');
+    width: 100%;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding: 100px 0 0 30px;
+    margin-bottom: 20px;
+}
+
+.carbon .btn{
+    background: #f4f4f4;
+    color: #333;
+}
+
+.carbon p{
+    width: 55%;
+    margin: 10px 0 20px;
+}
+
+/* Follow */
+.follow{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 30px 0 30px;
+}
+
+.follow *{
+    margin-right: 10px;
+}
+
+/* Links */
+.links{
+    background: #f2f2f2;
+    color: #616161;
+    font-size: 12px;
+    padding: 35px 0;
+}
+
+.links-inner{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;   /* grid-gap will leaves some space b/w the grids when the browser is shrunk */
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.links li{
+    line-height: 2.8;
+}
+
+/* Footer */
+.footer{
+    background: #f2f2f2;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+}
+
+.footer-inner{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px;
+}
+
+.footer div{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.footer div i{
+    margin-right: 10px;
+}
+
+.footer ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer li{
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+/* Adding Media Queries */
+
+/* For any screens of 700px or below */
+@media(max-width: 700px) {
+    .menu-btn{              /* it'll show ONLY whn the screen is 700px or below */
+        display: block;  
+    }
+
+    .menu-btn:hover{
+        opacity: 0.5;
+    }
+
+    .main-nav ul.right-menu{    /* for the menu icons & bar button not to go over each other */
+        margin-right: 50px;
+    }
+
+    .main-nav ul.main-menu{      /* we want the links to be visible ONLY on the left when the menu bar is clicked & NOT SHOW before that */
+        display: block;
+        position: absolute;  /* to make it set at the top */
+        top: 0;
+        left: 0;
+        background: #f2f2f2;
+        width: 50%;
+        height: 100%;
+        border-right: #ccc 1px solid;
+        opacity: 0.9;
+        padding: 30px;
+        transform: translateX(-500px);    /* with -500px we are putting menu list off the conatainer/hide out- it'll show up ONLY when click the menu bar btn*/
+        transition: transform 0.5s ease-in-out;   /* for the menu list to animate & show instead of just popping out */ 
+    }
+
+    .main-nav ul.main-menu li{   /* styling the links */
+        padding: 10px;
+        border-bottom: #ccc solid 1px;
+        font-size: 14px;
+    }
+
+    .main-nav ul.main-menu li:last-child{       /* to remove the border line from the last link */
+        border-bottom: 0;
+    }
+
+    .main-nav ul.main-menu.show{
+        transform: translateX(-20px);   /* when the menu bar btn is clicked, it'll SHOW up from -500px to on screen at -20px */
+    }
+
+    .home-cards{
+        grid-template-columns: repeat(2, 1fr);   /* when the screen is at 700 or below, it shows the contents in 2 columns */
+    }
+
+    .xbox .content p{
+        display: none;
+    }
+
+    .xbox .content h2{
+        margin-bottom: 20px;
+    }
+
+    .carbon p{
+        width: 85%;
+    }
+
+    .links .links-inner{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For any screens of 500px or below */
+@media(max-width: 500px) {
+    .home-cards{
+        grid-template-columns: 1fr;   /* when the screen is at 500 or below, it shows the contents in 2 columns */
+    } 
+
+    .links .links-inner{
+        grid-template-columns: 1fr;
+    }
+
+    .links .links-inner ul{
+        margin-bottom: 20px;    /* to have space b/w the links */
+    }
+}
